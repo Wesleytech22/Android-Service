@@ -49,4 +49,6 @@ class MainActivity : AppCompatActivity() {
     private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(this, message, duration).show()
     }
+
+    //Necessario ajuste na comunicação do serviço
 }
