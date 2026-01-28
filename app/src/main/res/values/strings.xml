@@ -3,8 +3,14 @@
     <string name="app_name">Music Player App</string>
     <string name="app_title">The Services App</string>
     <string name="start_service">Start Service</string>
+    <string name="pause_service">Pause Service</string>
     <string name="stop_service">Stop Service</string>
     <string name="connected_success">Conectado com sucesso!</string>
     <string name="disconnected_success">Desconectado com sucesso!</string>
     <string name="service_active">Serviço Ativo</string>
+    <string name="music_playing">🎵 Música Tocando</string>
+    <string name="music_paused">⏸️ Música Pausada</string>
+    <string name="music_stopped">⏹️ Música Parada</string>
+    <string name="service_status">Status do Serviço</string>
+    <string name="time_format">%1$s / %2$s</string>
 </resources>
