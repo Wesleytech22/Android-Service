@@ -378,4 +378,6 @@ class MainActivity : AppCompatActivity() {
             isBound = false
         }
     }
+
+    //Necessario ajuste na comunicação do serviço
 }
