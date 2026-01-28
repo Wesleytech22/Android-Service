@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SongSelectionActivity">
+
+    <!-- Cabeçalho -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecionar Músicas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:background="@color/purple_500" />
+
+    <!-- Informação da fila - USANDO COR EXISTENTE -->
+    <TextView
+        android:id="@+id/queue_size_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fila: 0 músicas"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:background="@color/gray" /> <!-- Mudei de light_gray para gray -->
+
+    <!-- Botão para adicionar todas as músicas -->
+    <Button
+        android:id="@+id/add_all_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ ADICIONAR TODAS"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white" />
+
+    <!-- Lista de músicas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songs_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="4dp" />
+
+    <!-- Botão para voltar -->
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✅ VOLTAR AO PLAYER"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white" />
+
+</LinearLayout>

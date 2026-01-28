@@ -108,4 +108,141 @@
 
     </LinearLayout>
 
+    <!-- Informações da música atual -->
+    <LinearLayout
+        android:id="@+id/current_song_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons_container">
+
+        <TextView
+            android:id="@+id/current_song_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título da Música"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/current_song_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Artista"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Controles de navegação -->
+    <LinearLayout
+        android:id="@+id/navigation_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_song_info">
+
+        <Button
+            android:id="@+id/prev_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="⏮"
+            android:textSize="20sp"
+            android:enabled="false"
+            android:backgroundTint="@color/purple_200" />
+
+        <Button
+            android:id="@+id/repeat_button"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="REP"
+            android:textSize="14sp"
+            android:backgroundTint="@color/gray" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="⏭"
+            android:textSize="20sp"
+            android:enabled="false"
+            android:backgroundTint="@color/purple_200" />
+
+    </LinearLayout>
+
+    <!-- Título da fila -->
+    <TextView
+        android:id="@+id/queue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Fila de Reprodução"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navigation_buttons" />
+
+    <!-- Lista da fila -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/queue_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/queue_controls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queue_title" />
+
+    <!-- Controles da fila -->
+    <LinearLayout
+        android:id="@+id/queue_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/add_songs_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="+ Adicionar Músicas"
+            android:padding="12dp"
+            android:backgroundTint="@color/teal_200" />
+
+        <Button
+            android:id="@+id/clear_queue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpar Fila"
+            android:padding="12dp"
+            android:backgroundTint="@color/teal_200" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
