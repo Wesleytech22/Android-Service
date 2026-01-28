@@ -84,14 +84,14 @@ class MainActivity : AppCompatActivity() {
         pauseBtn.setOnClickListener {
             musicService?.pauseMusic()
             updateUI()
-            Toast.makeText(this, "⏸️ Pausado", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "⏸️ Pausado", Toast.LENGTH_SHORT).show()
         }
 
         stopBtn.setOnClickListener {
             musicService?.stopMusic()
             updateUI()
             seekBar.progress = 0 // ⬅️ Reset visual do seekbar
-            Toast.makeText(this, "⏹️ Parado", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "⏹️ Parado", Toast.LENGTH_SHORT).show()
         }
 
         // Configurar SeekBar para arrastar
